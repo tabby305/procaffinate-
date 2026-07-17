@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procaffinate - Where Every Sip Sparks Creativity. Premium artisan coffee house.">
+    <title>Procaffinate | Premium Artisan Coffee</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <div class="coffee-cup">
+                <div class="cup-body">
+                    <div class="coffee-fill"></div>
+                    <div class="steam">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="cup-handle"></div>
+                <div class="cup-saucer"></div>
+            </div>
+            <p class="loading-text">Brewing your experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Floating Coffee Beans Background -->
+    <div class="floating-beans" id="floating-beans"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">☕</span>
+                <span class="logo-text">Procaffinate</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#best-sellers" class="nav-link">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#special-offers" class="nav-link">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reviews" class="nav-link">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Search Toggle -->
+                <button class="nav-btn search-toggle" id="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+
+                <!-- Favorites -->
+                <button class="nav-btn favorites-btn" id="favorites-btn" aria-label="Favorites">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="favorites-count" id="favorites-count">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="nav-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button class="nav-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav-btn hamburger" id="hamburger" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for coffee, tea, desserts...">
+                <button class="search-close" id="search-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3 class="cart-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    Your Cart
+                </h3>
+                <button class="cart-close" id="cart-close" aria-label="Close cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Empty Cart State -->
+            <div class="cart-empty" id="cart-empty">
+                <div class="cart-empty-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                <h4>Your cart is empty</h4>
+                <p>Looks like you haven't added any items yet</p>
+                <button class="btn btn-primary" id="start-ordering">
+                    <span>Start Ordering</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected by JavaScript -->
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="cart-footer" id="cart-footer">
+                <div class="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Tax (8%)</span>
+                        <span id="cart-tax">$0.00</span>
+                    </div>
+                    <div class="cart-summary-row cart-total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="clear-cart">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                        <span>Clear Cart</span>
+                    </button>
+                    <button class="btn btn-primary" id="checkout-btn">
+                        <span>Checkout</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="hero-particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">✦</span>
+                <span>Premium Artisan Coffee</span>
+                <span class="badge-icon">✦</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">Where Every</span>
+                <span class="title-line title-accent">Sip Sparks</span>
+                <span class="title-line">Creativity</span>
+            </h1>
+
+            <p class="hero-tagline">
+                Discover the art of perfectly crafted coffee. 
+                Every cup tells a story of passion, precision, and premium beans.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Order Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#menu" class="btn btn-secondary">
+                    <span>View Menu</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Coffee Varieties</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">5K+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">Star Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+
+        <!-- Hero Side Image -->
+        <div class="hero-side-image">
+            <div class="side-image-container">
+                <div class="image-frame">
+                    <div class="coffee-art">
+                        <span>☕</span>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <span class="card-icon">☕</span>
+                    <span class="card-text">Freshly Brewed</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">⭐</span>
+                    <span class="card-text">Premium Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">Crafted with Passion,<br>Served with Love</h2>
+                <p class="section-subtitle">
+                    Discover the journey of Procaffinate – where every cup is a masterpiece 
+                    born from dedication, quality, and an unwavering love for coffee.
+                </p>
+            </div>
+
+            <!-- About Content Grid -->
+            <div class="about-grid">
+                <!-- Story Card -->
+                <div class="about-card story-card reveal stagger-1">
+                    <div class="about-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">Our Story</h3>
+                    <p class="about-card-text">
+                        Founded in 2018, Procaffinate began as a small dream between two coffee enthusiasts 
+                        who believed that a perfect cup could transform ordinary moments into extraordinary 
+                        memories. From a single espresso machine to a beloved café destination, we've grown 
+                        while staying true to our artisan roots.
+                    </p>
+                    <div class="story-highlight">
+                        <span class="highlight-number">7+</span>
+                        <span class="highlight-text">Years of Excellence</span>
+                    </div>
+                </div>
+
+                <!-- Mission & Vision -->
+                <div class="about-card-group reveal stagger-2">
+                    <!-- Mission Card -->
+                    <div class="about-card mission-card">
+                        <div class="about-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">Our Mission</h3>
+                        <p class="about-card-text">
+                            To craft exceptional coffee experiences that inspire creativity, 
+                            foster connections, and bring warmth to every moment of your day.
+                        </p>
+                    </div>
+
+                    <!-- Vision Card -->
+                    <div class="about-card vision-card">
+                        <div class="about-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">Our Vision</h3>
+                        <p class="about-card-text">
+                            To become the world's most cherished coffee house, known for our 
+                            unwavering commitment to quality, sustainability, and community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="about-values reveal stagger-3">
+                <div class="value-item">
+                    <div class="value-icon">🌱</div>
+                    <h4 class="value-title">Sustainability</h4>
+                    <p class="value-text">Ethically sourced beans from sustainable farms worldwide</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✋</div>
+                    <h4 class="value-title">Handcrafted</h4>
+                    <p class="value-text">Every drink made with care by expert baristas</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">❤️</div>
+                    <h4 class="value-title">Community</h4>
+                    <p class="value-text">A warm space for connection and creativity</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✨</div>
+                    <h4 class="value-title">Quality</h4>
+                    <p class="value-text">Only the finest beans make it to your cup</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-section reveal">
+                <h3 class="timeline-title">Our Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2018</span>
+                            <h4 class="timeline-event">The Beginning</h4>
+                            <p class="timeline-text">Opened our first small café with just 6 tables and a dream</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2019</span>
+                            <h4 class="timeline-event">First Award</h4>
+                            <p class="timeline-text">Won "Best New Coffee House" in the city awards</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2020</span>
+                            <h4 class="timeline-event">Going Digital</h4>
+                            <p class="timeline-text">Launched online ordering and delivery services</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2022</span>
+                            <h4 class="timeline-event">Expansion</h4>
+                            <p class="timeline-text">Opened our second location and roastery</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2024</span>
+                            <h4 class="timeline-event">Recognition</h4>
+                            <p class="timeline-text">Named among top 50 artisan cafés nationwide</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">Today</span>
+                            <h4 class="timeline-event">Growing Together</h4>
+                            <p class="timeline-text">Serving 5000+ happy customers weekly with love</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="about-cta reveal stagger-4">
+                <div class="cta-content">
+                    <h3>Experience the Procaffinate Difference</h3>
+                    <p>Visit us today and discover why coffee lovers keep coming back</p>
+                </div>
+                <a href="#menu" class="btn btn-primary">
+                    <span>Explore Our Menu</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Crafted with Passion,<br>Served with Perfection</h2>
+                <p class="section-subtitle">
+                    Explore our handcrafted beverages and artisanal treats, 
+                    each made with the finest ingredients and utmost care.
+                </p>
+            </div>
+
+            <!-- Menu Filter -->
+            <div class="menu-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="coffee">Coffee</button>
+                <button class="filter-btn" data-filter="tea">Tea</button>
+                <button class="filter-btn" data-filter="cold-coffee">Cold Coffee</button>
+                <button class="filter-btn" data-filter="milkshakes">Milkshakes</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="snacks">Snacks</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items will be injected by JavaScript -->
+            </div>
+
+            <!-- Load More -->
+            <div class="menu-load-more reveal">
+                <button class="btn btn-secondary" id="load-more-btn">
+                    <span>Load More</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Popup -->
+    <div class="nutrition-popup" id="nutrition-popup">
+        <div class="nutrition-content">
+            <button class="nutrition-close" id="nutrition-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="nutrition-header">
+                <div class="nutrition-icon" id="nutrition-icon">☕</div>
+                <h3 class="nutrition-title" id="nutrition-title">Item Name</h3>
+                <p class="nutrition-price" id="nutrition-price">$4.99</p>
+            </div>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <span class="nutrition-value" id="nutrition-calories">180</span>
+                    <span class="nutrition-label">Calories</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value" id="nutrition-protein">8g</span>
+                    <span class="nutrition-label">Protein</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value" id="nutrition-sugar">12g</span>
+                    <span class="nutrition-label">Sugar</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="nutrition-value" id="nutrition-serving">12 oz</span>
+                    <span class="nutrition-label">Serving Size</span>
+                </div>
+            </div>
+            <div class="nutrition-ingredients">
+                <h4>Ingredients</h4>
+                <p id="nutrition-ingredients-list">Premium espresso, steamed milk, vanilla syrup, whipped cream</p>
+            </div>
+            <button class="btn btn-primary nutrition-add-btn" id="nutrition-add-btn">
+                <span>Add to Cart</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers" id="best-sellers">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Customer Favorites</span>
+                <h2 class="section-title">Best Sellers</h2>
+                <p class="section-subtitle">
+                    Discover what our customers love most. These handpicked favorites 
+                    are the heart of our menu.
+                </p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="carousel-container reveal">
+                <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carousel-track">
+                        <!-- Best Seller Card 1 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge">#1 Best Seller</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">☕</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Coffee</div>
+                                <h3 class="best-seller-title">Caramel Macchiato</h3>
+                                <p class="best-seller-desc">Espresso with steamed milk and vanilla-caramel drizzle. A timeless classic that never fails to delight.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$6.49</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.8</span>
+                                        <span class="best-seller-orders">2.4K orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="2">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Best Seller Card 2 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge hot">Trending</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">🍵</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Tea</div>
+                                <h3 class="best-seller-title">Matcha Latte</h3>
+                                <p class="best-seller-desc">Ceremonial grade matcha whisked with steamed oat milk. Earthy, creamy, and utterly addictive.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$6.49</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.8</span>
+                                        <span class="best-seller-orders">1.8K orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="8">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Best Seller Card 3 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge">Staff Pick</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">☕</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Coffee</div>
+                                <h3 class="best-seller-title">Mocha Delight</h3>
+                                <p class="best-seller-desc">Espresso blended with rich chocolate and steamed milk. Pure indulgence in every sip.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$6.99</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.9</span>
+                                        <span class="best-seller-orders">1.5K orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="5">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Best Seller Card 4 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge hot">Popular</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">🍰</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Dessert</div>
+                                <h3 class="best-seller-title">Tiramisu</h3>
+                                <p class="best-seller-desc">Classic Italian dessert with espresso-soaked ladyfingers and mascarpone cream.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$9.99</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.9</span>
+                                        <span class="best-seller-orders">1.2K orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="19">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Best Seller Card 5 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge">Classic</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">🧊</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Cold Coffee</div>
+                                <h3 class="best-seller-title">Vietnamese Iced Coffee</h3>
+                                <p class="best-seller-desc">Strong dark roast coffee with sweetened condensed milk. Bold, sweet, and refreshing.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$7.49</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.9</span>
+                                        <span class="best-seller-orders">980 orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="12">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Best Seller Card 6 -->
+                        <div class="best-seller-card">
+                            <div class="best-seller-badge">New</div>
+                            <div class="best-seller-image">
+                                <span class="best-seller-icon">🥤</span>
+                            </div>
+                            <div class="best-seller-content">
+                                <div class="best-seller-category">Milkshake</div>
+                                <h3 class="best-seller-title">Chocolate Indulgence</h3>
+                                <p class="best-seller-desc">Rich chocolate ice cream with cocoa and chocolate drizzle. A chocolate lover's dream.</p>
+                                <div class="best-seller-footer">
+                                    <span class="best-seller-price">$9.49</span>
+                                    <div class="best-seller-stats">
+                                        <span class="best-seller-rating">★ 4.9</span>
+                                        <span class="best-seller-orders">850 orders</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm best-seller-add" data-id="16">
+                                    <span>Add to Cart</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots" id="carousel-dots">
+                <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Reservation Section -->
+    <section class="reservation" id="reservation">
+        <div class="reservation-bg">
+            <div class="reservation-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="reservation-wrapper">
+                <!-- Left Side - Info -->
+                <div class="reservation-info reveal">
+                    <span class="section-tag">Book a Table</span>
+                    <h2 class="section-title">Reserve Your<br>Perfect Spot</h2>
+                    <p class="reservation-desc">
+                        Whether it's a cozy date, a business meeting, or a catch-up with friends, 
+                        we have the perfect table waiting for you. Book in advance and skip the wait.
+                    </p>
+
+                    <div class="reservation-features">
+                        <div class="reservation-feature">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-text">
+                                <h4>Instant Confirmation</h4>
+                                <p>Get your reservation confirmed immediately</p>
+                            </div>
+                        </div>
+                        <div class="reservation-feature">
+                            <div class="feature-icon">🎁</div>
+                            <div class="feature-text">
+                                <h4>Special Requests</h4>
+                                <p>We accommodate all special occasions</p>
+                            </div>
+                        </div>
+                        <div class="reservation-feature">
+                            <div class="feature-icon">⏰</div>
+                            <div class="feature-text">
+                                <h4>Flexible Timing</h4>
+                                <p>Choose from available time slots</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reservation-hours">
+                        <h4>Opening Hours</h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <span>7:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <span>8:00 AM - 11:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <span>8:00 AM - 9:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="reservation-form-container reveal">
+                    <form class="reservation-form" id="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-name">Full Name *</label>
+                                <input type="text" id="res-name" name="name" placeholder="John Doe" required>
+                                <span class="form-error" id="name-error">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-email">Email *</label>
+                                <input type="email" id="res-email" name="email" placeholder="john@example.com" required>
+                                <span class="form-error" id="email-error">Please enter a valid email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-phone">Phone *</label>
+                                <input type="tel" id="res-phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                                <span class="form-error" id="phone-error">Please enter a valid phone number</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-guests">Number of Guests *</label>
+                                <select id="res-guests" name="guests" required>
+                                    <option value="" disabled selected>Select guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                    <option value="7">7 Guests</option>
+                                    <option value="8">8+ Guests</option>
+                                </select>
+                                <span class="form-error" id="guests-error">Please select number of guests</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-date">Date *</label>
+                                <input type="date" id="res-date" name="date" required>
+                                <span class="form-error" id="date-error">Please select a valid date</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-time">Time *</label>
+                                <select id="res-time" name="time" required>
+                                    <option value="" disabled selected>Select time</option>
+                                    <option value="07:00">7:00 AM</option>
+                                    <option value="07:30">7:30 AM</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="08:30">8:30 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="09:30">9:30 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="10:30">10:30 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="14:30">2:30 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="15:30">3:30 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="16:30">4:30 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                    <option value="21:30">9:30 PM</option>
+                                </select>
+                                <span class="form-error" id="time-error">Please select a time</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-request">Special Requests</label>
+                            <textarea id="res-request" name="request" rows="3" placeholder="Any dietary requirements, celebrations, or seating preferences..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="reserve-btn">
+                            <span>Reserve Table</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Confirmation Popup -->
+    <div class="reservation-popup" id="reservation-popup">
+        <div class="popup-content">
+            <button class="popup-close" id="popup-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="popup-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h3>Reservation Confirmed!</h3>
+            <p>Your table has been reserved successfully. We look forward to welcoming you!</p>
+            <div class="popup-details" id="popup-details">
+                <!-- Details will be populated by JS -->
+            </div>
+            <button class="btn btn-primary" id="popup-ok">
+                <span>Perfect!</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Find Us</span>
+                <h2 class="section-title">Visit Our Café</h2>
+                <p class="section-subtitle">
+                    We're conveniently located in the heart of the city. 
+                    Come experience the warmth of Procaffinate.
+                </p>
+            </div>
+
+            <div class="location-wrapper">
+                <!-- Map Container -->
+                <div class="location-map reveal">
+                    <div class="map-container" id="map-container">
+                        <!-- Placeholder Map (Static) -->
+                        <div class="map-placeholder">
+                            <div class="map-pin">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5C3.5 14.88 12 24 12 24S20.5 14.88 20.5 8.5C20.5 3.81 16.69 0 12 0ZM12 11.5C10.34 11.5 9 10.16 9 8.5S10.34 5.5 12 5.5S15 6.84 15 8.5S13.66 11.5 12 11.5Z"/>
+                                </svg>
+                            </div>
+                            <div class="map-info-overlay">
+                                <span class="map-title">Procaffinate</span>
+                                <span class="map-address">123 Coffee Street, Artisan District</span>
+                            </div>
+                            <div class="map-grid">
+                                <div class="map-road map-road-h"></div>
+                                <div class="map-road map-road-v"></div>
+                                <div class="map-building building-1"></div>
+                                <div class="map-building building-2"></div>
+                                <div class="map-building building-3"></div>
+                                <div class="map-building building-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Info -->
+                <div class="location-info reveal">
+                    <!-- Address Card -->
+                    <div class="location-card">
+                        <div class="location-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="location-card-content">
+                            <h4>Address</h4>
+                            <p>123 Coffee Street, Artisan District<br>New York, NY 10001</p>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="location-card-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="location-card">
+                        <div class="location-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="location-card-content">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <a href="tel:+15551234567" class="location-card-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="location-card">
+                        <div class="location-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="location-card-content">
+                            <h4>Email</h4>
+                            <p>hello@procaffinate.com</p>
+                        </div>
+                        <a href="mailto:hello@procaffinate.com" class="location-card-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Parking Card -->
+                    <div class="location-card parking-card">
+                        <div class="location-card-icon parking-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                                <path d="M16 8h4l3 8V3"></path>
+                                <path d="M7 18v3"></path>
+                                <path d="M12 18v3"></path>
+                            </svg>
+                        </div>
+                        <div class="location-card-content">
+                            <h4>Parking</h4>
+                            <p>Free parking available behind the café. Street parking also available.</p>
+                        </div>
+                        <span class="parking-badge">Free</span>
+                    </div>
+
+                    <!-- Opening Hours -->
+                    <div class="location-hours">
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Opening Hours
+                        </h4>
+                        <div class="hours-grid">
+                            <div class="hours-row">
+                                <span class="day">Monday - Friday</span>
+                                <span class="time">7:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Saturday</span>
+                                <span class="time">8:00 AM - 11:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Sunday</span>
+                                <span class="time">8:00 AM - 9:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="status-badge open">
+                            <span class="status-dot"></span>
+                            <span>We're Open Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="reviews-bg">
+            <div class="reviews-quote">"</div>
+        </div>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">
+                    Don't just take our word for it. Hear from the people 
+                    who make our café special every day.
+                </p>
+            </div>
+
+            <!-- Reviews Slider -->
+            <div class="reviews-slider reveal">
+                <div class="reviews-track" id="reviews-track">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            "Procaffinate has completely changed my morning routine. 
+                            The Caramel Macchiato is absolutely divine! The atmosphere 
+                            is so cozy and perfect for getting work done."
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #E8A87C, #D4A574);">
+                                <span>SK</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Kim</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                        <div class="review-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            Verified Customer
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            "Best matcha latte in town! I've tried many places but 
+                            Procaffinate's matcha is on another level. The staff is 
+                            incredibly friendly and the space is beautiful."
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #95B8D1, #7BA3C4);">
+                                <span>MC</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Food Blogger</span>
+                            </div>
+                        </div>
+                        <div class="review-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            Verified Customer
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star half">★</span>
+                        </div>
+                        <p class="review-text">
+                            "The tiramisu here is heavenly! Perfect pairing with 
+                            their espresso. This place has become my go-to spot for 
+                            date nights and weekend brunches."
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #B8A9C9, #A094B7);">
+                                <span>EP</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Emily Parker</h4>
+                                <span>Local Foodie</span>
+                            </div>
+                        </div>
+                        <div class="review-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            Verified Customer
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            "As a remote worker, I appreciate the great Wi-Fi and 
+                            comfortable seating. The cold brew keeps me productive 
+                            all day. Highly recommend for fellow freelancers!"
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #D4A574, #C49A6C);">
+                                <span>JR</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>James Rodriguez</h4>
+                                <span>Freelancer</span>
+                            </div>
+                        </div>
+                        <div class="review-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            Verified Customer
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            "Celebrated my birthday here and it was perfect! The 
+                            staff surprised me with a complimentary dessert. Such a 
+                            warm and welcoming place. Will definitely come back!"
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #C9A87C, #B8976B);">
+                                <span>AW</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Anna Williams</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                        <div class="review-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            Verified Customer
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="reviews-controls">
+                    <button class="reviews-btn reviews-prev" id="reviews-prev" aria-label="Previous review">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="reviews-dots" id="reviews-dots">
+                        <button class="reviews-dot active" data-index="0" aria-label="Review 1"></button>
+                        <button class="reviews-dot" data-index="1" aria-label="Review 2"></button>
+                        <button class="reviews-dot" data-index="2" aria-label="Review 3"></button>
+                        <button class="reviews-dot" data-index="3" aria-label="Review 4"></button>
+                        <button class="reviews-dot" data-index="4" aria-label="Review 5"></button>
+                    </div>
+                    <button class="reviews-btn reviews-next" id="reviews-next" aria-label="Next review">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="reviews-stats reveal">
+                <div class="stat-card">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">Average Rating</span>
+                    <div class="stat-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">2,500+</span>
+                    <span class="stat-label">Happy Reviews</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">98%</span>
+                    <span class="stat-label">Recommend Us</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Gallery</span>
+                <h2 class="section-title">Moments at Procaffinate</h2>
+                <p class="section-subtitle">
+                    Take a visual journey through our café. Every corner tells a story, 
+                    every cup creates a memory.
+                </p>
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="gallery-filter reveal">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="interior">Interior</button>
+                <button class="gallery-filter-btn" data-filter="coffee">Coffee</button>
+                <button class="gallery-filter-btn" data-filter="food">Food</button>
+                <button class="gallery-filter-btn" data-filter="ambiance">Ambiance</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery Item 1 - Large -->
+                <div class="gallery-item large" data-category="interior" data-index="0">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #D4A574, #C49A6C);">
+                        <span class="gallery-icon">🏠</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Our Cozy Interior</span>
+                        <span class="gallery-category">Interior</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="coffee" data-index="1">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #8B7355, #6B4423);">
+                        <span class="gallery-icon">☕</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Perfect Espresso</span>
+                        <span class="gallery-category">Coffee</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="food" data-index="2">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #C9A87C, #B8976B);">
+                        <span class="gallery-icon">🍰</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Artisan Desserts</span>
+                        <span class="gallery-category">Food</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="ambiance" data-index="3">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #E8D5C4, #D4C4B0);">
+                        <span class="gallery-icon">🕯️</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Evening Ambiance</span>
+                        <span class="gallery-category">Ambiance</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="coffee" data-index="4">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #5D3A1A, #3C2415);">
+                        <span class="gallery-icon">🍵</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Matcha Perfection</span>
+                        <span class="gallery-category">Coffee</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 - Large -->
+                <div class="gallery-item large" data-category="interior" data-index="5">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #B8A99A, #9E8E7E);">
+                        <span class="gallery-icon">🪑</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Reading Nook</span>
+                        <span class="gallery-category">Interior</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="food" data-index="6">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #A094B7, #8E82A5);">
+                        <span class="gallery-icon">🥐</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Fresh Pastries</span>
+                        <span class="gallery-category">Food</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="ambiance" data-index="7">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #7BA3C4, #5C8AB0);">
+                        <span class="gallery-icon">🌿</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Garden View</span>
+                        <span class="gallery-category">Ambiance</span>
+                        <button class="gallery-expand" aria-label="Expand image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Special Offers</span>
+                <h2 class="section-title">Deals You Can't Resist</h2>
+                <p class="section-subtitle">
+                    Exclusive offers and limited-time deals to make your coffee experience even better.
+                    Don't miss out on these special savings!
+                </p>
+            </div>
+
+            <!-- Featured Offer -->
+            <div class="offer-featured reveal">
+                <div class="offer-featured-content">
+                    <span class="offer-badge">Limited Time</span>
+                    <h3 class="offer-title">Happy Hour Special</h3>
+                    <p class="offer-desc">Enjoy 30% off on all specialty coffees every weekday from 3 PM to 6 PM. Perfect for your afternoon pick-me-up!</p>
+                    <div class="offer-timer" data-end="2026-12-31T18:00:00">
+                        <div class="timer-block">
+                            <span class="timer-value" id="hours">00</span>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-block">
+                            <span class="timer-value" id="minutes">00</span>
+                            <span class="timer-label">Minutes</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-block">
+                            <span class="timer-value" id="seconds">00</span>
+                            <span class="timer-label">Seconds</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Claim Offer</button>
+                </div>
+                <div class="offer-featured-image">
+                    <span class="offer-icon">☕</span>
+                    <div class="offer-discount">30% OFF</div>
+                </div>
+            </div>
+
+            <!-- Offers Grid -->
+            <div class="offers-grid">
+                <!-- Offer Card 1 -->
+                <div class="offer-card reveal">
+                    <div class="offer-card-header">
+                        <span class="offer-card-icon">🎂</span>
+                        <span class="offer-card-badge">Birthday</span>
+                    </div>
+                    <h4 class="offer-card-title">Birthday Freebie</h4>
+                    <p class="offer-card-desc">Get a free specialty coffee on your birthday! Just show your ID at checkout.</p>
+                    <div class="offer-card-code">
+                        <span>BIRTHDAY2026</span>
+                        <button class="copy-btn" data-code="BIRTHDAY2026">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="offer-card reveal">
+                    <div class="offer-card-header">
+                        <span class="offer-card-icon">👥</span>
+                        <span class="offer-card-badge">Group</span>
+                    </div>
+                    <h4 class="offer-card-title">Group Discount</h4>
+                    <p class="offer-card-desc">Bring 4+ friends and get 20% off your entire order. Perfect for team meetings!</p>
+                    <div class="offer-card-code">
+                        <span>FRIENDS20</span>
+                        <button class="copy-btn" data-code="FRIENDS20">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 3 -->
+                <div class="offer-card reveal">
+                    <div class="offer-card-header">
+                        <span class="offer-card-icon">🌅</span>
+                        <span class="offer-card-badge">Morning</span>
+                    </div>
+                    <h4 class="offer-card-title">Early Bird Special</h4>
+                    <p class="offer-card-desc">Arrive before 8 AM and get 15% off any breakfast combo. Rise and shine!</p>
+                    <div class="offer-card-code">
+                        <span>EARLY15</span>
+                        <button class="copy-btn" data-code="EARLY15">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 4 -->
+                <div class="offer-card reveal">
+                    <div class="offer-card-header">
+                        <span class="offer-card-icon">📱</span>
+                        <span class="offer-card-badge">App Only</span>
+                    </div>
+                    <h4 class="offer-card-title">First App Order</h4>
+                    <p class="offer-card-desc">Download our app and get 25% off your first mobile order. Easy and convenient!</p>
+                    <div class="offer-card-code">
+                        <span>APP25</span>
+                        <button class="copy-btn" data-code="APP25">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="offers-newsletter reveal">
+                <div class="newsletter-content">
+                    <h3>Stay Updated on Exclusive Deals</h3>
+                    <p>Subscribe to our newsletter and be the first to know about new offers and promotions.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending" id="trending">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Trending Now</span>
+                <h2 class="section-title">What's Popular</h2>
+                <p class="section-subtitle">
+                    Discover what our customers are loving right now. These are the items everyone's talking about!
+                </p>
+            </div>
+
+            <!-- Trending Grid -->
+            <div class="trending-grid" id="trending-grid">
+                <!-- Trending items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <span class="section-tag">Contact Us</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Have questions, suggestions, or just want to say hello? We'd love to hear from you.
+                    Reach out and we'll get back to you as soon as possible.
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    <p class="contact-desc">Fill out the form and our team will get back to you within 24 hours.</p>
+
+                    <div class="contact-cards">
+                        <!-- Phone -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Email</h4>
+                                <a href="mailto:hello@procaffinate.com">hello@procaffinate.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Address</h4>
+                                <p>123 Coffee Lane, Bean City<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Follow Us</h4>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" aria-label="Facebook">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="Instagram">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="Twitter">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="contact-hours">
+                        <h4>Business Hours</h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <span>7:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <span>8:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <span>8:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container reveal">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">First Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="John" required>
+                                <span class="form-error" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-lastname">Last Name</label>
+                                <input type="text" id="contact-lastname" name="lastname" placeholder="Doe" required>
+                                <span class="form-error" id="lastname-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-phone">Phone (Optional)</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000">
+                            <span class="form-error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="reservation">Reservation Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="catering">Catering Services</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-content" id="lightbox-content">
+            <div class="lightbox-image" id="lightbox-image">
+                <span class="lightbox-icon" id="lightbox-icon">☕</span>
+            </div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title">Image Title</h3>
+                <span class="lightbox-category" id="lightbox-category">Category</span>
+                <span class="lightbox-counter" id="lightbox-counter">1 / 8</span>
+            </div>
+        </div>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Main Footer -->
+            <div class="footer-main">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon">☕</span>
+                        <span class="logo-text">PROCaffINATE</span>
+                    </a>
+                    <p class="footer-tagline">Where Every Sip Sparks Creativity. Premium artisan coffee house dedicated to crafting unforgettable experiences.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#offers">Special Offers</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Coffee Lane, Bean City, NY 10001</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:hello@procaffinate.com">hello@procaffinate.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hours -->
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><span>Mon - Fri</span><span>7:00 AM - 9:00 PM</span></li>
+                        <li><span>Saturday</span><span>8:00 AM - 10:00 PM</span></li>
+                        <li><span>Sunday</span><span>8:00 AM - 8:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 PROCaffINATE. All rights reserved. Crafted with <span class="heart">♥</span> for coffee lovers.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/offers.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/extras.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
